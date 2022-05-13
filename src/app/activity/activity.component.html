@@ -1,0 +1,19 @@
+<section>
+    <div>
+        <label for="tipo"> tipo</label>
+        <input type="text" id="tipo" [(ngModel)]="tipo">
+        
+        <button (click)="cercaActivity()">invia</button>
+    </div>
+</section>
+
+<section class="cerca-risultati">
+
+    <ul>
+        <li *ngFor="let location of cercaRisultati">
+            <p><a [routerLink]="['/details', location.id]">{{location.cercaRisultati}}, {{location.listaActivity}}</a></p>
+            
+        </li>
+    </ul>
+
+</section>
